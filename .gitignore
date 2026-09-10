@@ -1,0 +1,9 @@
+*
+!.gitignore
+!.nojekyll
+!index.html
+!playlist.js
+!README.md
+!media/
+media/*
+!media/segment-*.mp3
