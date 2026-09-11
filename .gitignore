@@ -7,3 +7,12 @@
 !media/
 media/*
 !media/segment-*.mp3
+!eva-test/
+eva-test/*
+!eva-test/index.html
+!eva-test/playlist.js
+!eva-test/README.md
+!eva-test/media/
+eva-test/media/*
+!eva-test/media/eva-*.mp3
+!eva-test/media/music-*.mp3
