@@ -19,9 +19,13 @@
 </footer></main><script src="playlist.js?v=naamvrij-eva-20260911-174957"></script><script src="../listen-analytics.js"></script><script>
 const $=id=>document.getElementById(id),audio=$('audio');
 const titleIntro=$('title-intro');
-titleIntro.addEventListener('play',()=>audio.pause());
-audio.addEventListener('play',()=>titleIntro.pause());
+let introRevision=null;
+titleIntro.addEventListener('play',()=>{audio.pause();introRevision=revision});
+audio.addEventListener('play',()=>{introRevision=null;titleIntro.pause()});
 let index=0,revision=0;const segments=playlist.segments,fmt=n=>{n=Number.isFinite(n)?Math.floor(n):0;return Math.floor(n/60)+':'+String(n%60).padStart(2,'0')};
+// The clicked intro replaces the opening and first story, not the first song.
+const introMusic=segments.findIndex(s=>s.kind==='music'&&playlist.tracks[s.track]?.artist==='David Bowie'&&playlist.tracks[s.track]?.title==='Buddha of Suburbia');
+titleIntro.addEventListener('ended',()=>{const uninterrupted=introRevision===revision;introRevision=null;if(titleIntro.ended&&uninterrupted&&introMusic>=0)load(introMusic,true)});
 const listenMeter=window.ListenAnalytics?ListenAnalytics.attach(audio,'eva-10-v1'):{select(){}};
 const starts=playlist.tracks.map((_,i)=>segments.findIndex(s=>s.track===i));
 $('count').textContent=playlist.tracks.length+' liedjes';
@@ -31,7 +35,7 @@ const PUBLIC_LYRICS_BASE="https://macmini-felix.tail58fa21.ts.net"; // build-tim
 const lyricTrackIds={"[\"David Bowie\",\"Buddha of Suburbia\"]": "bowie-buddha", "[\"Elisabeth Schwarzkopf, Nicolai Gedda e.a. · André Cluytens\",\"Les Contes d’Hoffmann — Hélas! mon cœur s’égare encore\"]": "offenbach-helas", "[\"Jacques Brel\",\"Ne me quitte pas\"]": "brel-ne-me-quitte-pas", "[\"Maria Callas\",\"Rigoletto — Gualtier Maldè!… Caro nome\"]": "callas-caro-nome", "[\"Lou Reed\",\"Perfect Day\"]": "lou-reed-perfect-day", "[\"Leonard Bernstein · New York Philharmonic\",\"Symfonie nr. 5 — Adagietto\"]": null, "[\"The Rolling Stones\",\"Gimme Shelter\"]": "rolling-stones-gimme-shelter", "[\"Barry White\",\"There It Is\"]": "barry-white-there-it-is", "[\"Lara Fabian\",\"Adagio (Italian)\"]": "lara-fabian-adagio", "[\"Andreas Scholl · Chiara Banchini · Ensemble 415\",\"Introduzione al Miserere, RV 638 — Filiae maestae Jerusalem (volledig)\"]": "vivaldi-filiae"};
 function updateLyrics(){const s=segments[index],link=$('lyricsLink'),note=$('lyricsNote');link.hidden=true;link.removeAttribute('href');if(s.track==null){note.textContent='Kies een lied voor lyrics en vertaling.';return;}const t=playlist.tracks[s.track],key=JSON.stringify([t.artist,t.title]);if(!Object.prototype.hasOwnProperty.call(lyricTrackIds,key)){note.textContent='Geen lyricskoppeling voor dit lied.';return;}const id=lyricTrackIds[key];if(!id){note.textContent='Instrumentale muziek · geen songtekst.';return;}link.href=PUBLIC_LYRICS_BASE+'/lyrics/'+encodeURIComponent(id);link.hidden=false;note.textContent='Opent de eigen songtekstpagina. Vertaling alleen na een klik daar. Niet elk nummer wordt gevonden.';}
 function paint(){const s=segments[index],t=playlist.tracks[s.track];$('kind').textContent=s.kind==='music'?'Muziek · '+(s.track+1)+' / '+playlist.tracks.length:'Eva · Callirrhoe · '+({opening:'opening',story:'het verhaal',closing:'afsluiting'}[s.role]);$('title').textContent=t?t.title:s.role==='opening'?'Even gaan zitten.':'Tot de volgende keer.';$('artist').textContent=t?t.artist:'Een kleine luisterreis, met Eva.';document.querySelectorAll('.track').forEach((b,i)=>b.setAttribute('aria-current',String(s.track===i)));$('prev').disabled=index===0;$('next').disabled=s.role==='closing';updateLyrics();}
-async function play(){const ticket=revision;try{await audio.play()}catch(e){if(ticket===revision&&e.name!=='AbortError')$('status').textContent='Afspelen niet gestart. Probeer opnieuw.'}}
+async function play(){const ticket=revision;try{await audio.play()}catch(e){if(ticket===revision&&e.name!=='AbortError')$('status').textContent='Je browser start het geluid niet automatisch. Klik op Afspelen om dit fragment te starten.'}}
 function load(i,autoplay=false){listenMeter.select(segments[i]);revision++;audio.pause();$('play').textContent='Afspelen';index=i;audio.src=segments[i].src;$('seek').disabled=true;$('seek').value=0;$('elapsed').textContent='0:00';$('total').textContent='—';$('status').textContent=autoplay?'Laden…':'Klaar om te luisteren';paint();audio.load();if(autoplay)play()}
 $('play').onclick=()=>audio.ended&&index===segments.length-1?load(0,true):audio.paused?play():audio.pause();$('stop').onclick=()=>{load(0);$('status').textContent='Gestopt · terug bij de opening'};
 $('next').onclick=()=>{const t=segments[index].track;load(t==null?starts[0]:t<starts.length-1?starts[t+1]:segments.length-1,!audio.paused)};
