@@ -47,4 +47,4 @@ audio.addEventListener('play',()=>{$('play').textContent='Pauzeren';$('status').
 audio.addEventListener('pause',()=>{$('play').textContent='Afspelen';if(!audio.ended)$('status').textContent='Gepauzeerd'});
 audio.addEventListener('ended',()=>{if(index<segments.length-1)load(index+1,true);else{$('status').textContent='Afgelopen · dank je voor het luisteren';$('play').textContent='Opnieuw'}});
 audio.addEventListener('error',()=>{$('status').textContent='Dit fragment kon niet laden. Kies een ander lied of probeer opnieuw.'});load(0);
-</script></body></html>
+</script><script src="music-waves.js?v=pcm-1"></script></body></html>
