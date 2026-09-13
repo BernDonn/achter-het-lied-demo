@@ -24,9 +24,9 @@ let introRevision=null;
 titleIntro.addEventListener('play',()=>{audio.pause();introRevision=revision});
 audio.addEventListener('play',()=>{introRevision=null;titleIntro.pause()});
 let index=0,revision=0;const segments=playlist.segments,fmt=n=>{n=Number.isFinite(n)?Math.floor(n):0;return Math.floor(n/60)+':'+String(n%60).padStart(2,'0')};
-// The clicked intro replaces the opening and first story, not the first song.
-const introMusic=segments.findIndex(s=>s.kind==='music'&&playlist.tracks[s.track]?.artist==='David Bowie'&&playlist.tracks[s.track]?.title==='Buddha of Suburbia');
-titleIntro.addEventListener('ended',()=>{const uninterrupted=introRevision===revision;introRevision=null;if(titleIntro.ended&&uninterrupted&&introMusic>=0)load(introMusic,true)});
+// The clicked video replaces only the opening; keep Bowie's story before his song.
+const introStory=segments.findIndex(s=>s.kind==='speech'&&s.role==='story'&&playlist.tracks[s.track]?.artist==='David Bowie'&&playlist.tracks[s.track]?.title==='Buddha of Suburbia');
+titleIntro.addEventListener('ended',()=>{const uninterrupted=introRevision===revision;introRevision=null;if(titleIntro.ended&&uninterrupted&&introStory>=0)load(introStory,true)});
 const listenMeter=window.ListenAnalytics?ListenAnalytics.attach(audio,'eva-11-v1'):{select(){}};
 const starts=playlist.tracks.map((_,i)=>segments.findIndex(s=>s.track===i));
 $('count').textContent=playlist.tracks.length+' liedjes';
