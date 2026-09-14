@@ -1,0 +1,141 @@
+{
+  "schemaVersion": 1,
+  "opening": "media/eva-opening.mp3?v=elf-1",
+  "closing": "media/eva-closing-peter.mp3?v=outro-1",
+  "tracks": [
+    {
+      "artist": "David Bowie",
+      "title": "Buddha of Suburbia",
+      "key": "track-01",
+      "speech": "media/eva-story-01.mp3?v=notes-final-1",
+      "primary": "bjCXm03lKJY",
+      "backup": null,
+      "note": "Albumversie, 2021-remaster (Rhino/Parlophone), niet de versie met Lenny Kravitz. Mastering kan afwijken van de lokale opname.",
+      "videoTitle": "Buddha Of Suburbia (2021 Remaster)",
+      "channel": "David Bowie - Topic",
+      "source": "https://www.youtube.com/watch?v=bjCXm03lKJY"
+    },
+    {
+      "artist": "Elisabeth Schwarzkopf, Nicolai Gedda e.a. · André Cluytens",
+      "title": "Les Contes d’Hoffmann — Hélas! mon cœur s’égare encore",
+      "key": "track-02",
+      "speech": "media/eva-story-03.mp3?v=naamvrij-eva-20260911-174957",
+      "primary": "VzL-z8u5TBc",
+      "backup": null,
+      "note": "Cluytens, Gedda, Schwarzkopf en ensemble; Warner Classics, 1989-remaster. Zonder de lokale openingsversterking.",
+      "videoTitle": "Les Contes d'Hoffmann (1989 Remastered Version) , Act III: Hélas! mon coeur s'égare encore!...",
+      "channel": "Nicolai Gedda - Topic",
+      "source": "https://www.youtube.com/watch?v=VzL-z8u5TBc"
+    },
+    {
+      "artist": "Jacques Brel",
+      "title": "Ne me quitte pas",
+      "key": "track-03",
+      "speech": "media/eva-story-04.mp3?v=notes-final-1",
+      "primary": "e0esAGxzP6Y",
+      "backup": null,
+      "note": "Officiële lyricvideo met de opname uit 1972 (Barclay). Exacte gelijkheid met de lokale opname niet vastgesteld.",
+      "videoTitle": "Jacques Brel - Ne me quitte pas (Official Lyric Video)",
+      "channel": "Jacques Brel",
+      "source": "https://www.youtube.com/watch?v=e0esAGxzP6Y"
+    },
+    {
+      "artist": "Maria Callas",
+      "title": "Rigoletto — Gualtier Maldè!… Caro nome",
+      "key": "track-04",
+      "speech": "media/eva-story-05.mp3?v=naamvrij-eva-20260911-174957",
+      "primary": "H2XgPmotAbE",
+      "backup": null,
+      "note": "Maria Callas — Gualtier Maldè! / Caro nome. Topic-upload; exacte remaster/volledige duur nog niet gelijkgesteld aan de lokale opname.",
+      "videoTitle": "Rigoletto, Act 1 Scene 13: No. 6, Scene ed Aria, \"Gualtier Maldè! … Caro nome che il mio cor\"...",
+      "channel": "Maria Callas - Topic",
+      "source": "https://www.youtube.com/watch?v=H2XgPmotAbE"
+    },
+    {
+      "artist": "Lou Reed",
+      "title": "Perfect Day",
+      "key": "track-05",
+      "speech": "media/eva-story-06.mp3?v=notes-final-1",
+      "primary": "9wxI4KK9ZYo",
+      "backup": null,
+      "note": "Officiële audio. Exacte mastering en speelduur kunnen afwijken van de lokale demo.",
+      "videoTitle": "Lou Reed - Perfect Day (Official Audio)",
+      "channel": "LouReedVEVO",
+      "source": "https://www.youtube.com/watch?v=9wxI4KK9ZYo"
+    },
+    {
+      "artist": "Leonard Bernstein · New York Philharmonic",
+      "title": "Symfonie nr. 5 — Adagietto",
+      "key": "track-06",
+      "speech": "media/eva-story-07.mp3?v=intro-revisies-20260911-133906",
+      "primary": "BPCbCmt89XQ",
+      "backup": null,
+      "note": "Bernstein / New York Philharmonic, Sony Classical, copyright 1964; exacte gelijkheid met de lokale master niet vastgesteld.",
+      "videoTitle": "Symphony No. 5 in C-Sharp Minor: IV. Adagietto. Sehr langsam",
+      "channel": "Leonard Bernstein - Topic",
+      "source": "https://www.youtube.com/watch?v=BPCbCmt89XQ"
+    },
+    {
+      "artist": "The Rolling Stones",
+      "title": "Gimme Shelter",
+      "key": "track-07",
+      "speech": "media/eva-story-08.mp3?v=intro-revisies-20260911-133906",
+      "primary": "RbmS3tQJ7Os",
+      "backup": null,
+      "note": "Officiële ABKCO-lyricvideo; beeldintro en speelduur kunnen afwijken van de lokale audio.",
+      "videoTitle": "The Rolling Stones - Gimme Shelter (Official Lyric Video)",
+      "channel": "ABKCOVEVO",
+      "source": "https://www.youtube.com/watch?v=RbmS3tQJ7Os"
+    },
+    {
+      "artist": "Barry White",
+      "title": "There It Is",
+      "key": "track-08",
+      "speech": "media/eva-story-09.mp3?v=notes-final-1",
+      "primary": "V4mEVLIgIcs",
+      "backup": null,
+      "note": "Barry White / John Roberts, The Icon Is Love, Universal. Exacte mastering niet gelijkgesteld.",
+      "videoTitle": "There It Is",
+      "channel": "Barry White - Topic",
+      "source": "https://www.youtube.com/watch?v=V4mEVLIgIcs"
+    },
+    {
+      "artist": "Lara Fabian",
+      "title": "Adagio (Italian)",
+      "key": "track-09",
+      "speech": "media/eva-story-10.mp3?v=naamvrij-eva-20260911-174957",
+      "primary": "7mIjEtmEfvc",
+      "backup": null,
+      "note": "Italiaanse studioversie, Columbia / Sony, 1999. Geen Engelse of liveversie.",
+      "videoTitle": "Adagio (Italian)",
+      "channel": "Lara Fabian - Topic",
+      "source": "https://www.youtube.com/watch?v=7mIjEtmEfvc"
+    },
+    {
+      "artist": "Andreas Scholl · Chiara Banchini · Ensemble 415",
+      "title": "Introduzione al Miserere, RV 638 — Sileant zephyri (deel II)",
+      "key": "track-10",
+      "speech": "media/eva-story-02.mp3?v=notes-final-1",
+      "primary": "j_7CsQ5oazU",
+      "backup": null,
+      "note": "LET OP: alleen deel II, Sileant zephyri, met Scholl / Banchini / Ensemble 415. De volledige RV 638 is nog niet geverifieerd; geen vervanging van het volledige werk.",
+      "versionNotice": "Alleen deel II · niet het volledige werk",
+      "videoTitle": "Introduzione al miserere, RV 638 \"Filiae Maestae Jerusalem\": II. Sileant zephyri",
+      "channel": "Andreas Scholl - Topic",
+      "source": "https://www.youtube.com/watch?v=j_7CsQ5oazU"
+    },
+    {
+      "artist": "Anima Sound System",
+      "title": "68 (mix niet bevestigd)",
+      "key": "track-11",
+      "speech": "media/eva-story-11.mp3?v=elf-1",
+      "primary": "mSiimmBj5rk",
+      "backup": null,
+      "note": "Upload van het artiestenkanaal, getiteld ’68 (Anima). Niet bevestigd als de Original Mix.",
+      "versionNotice": "Original Mix niet bevestigd",
+      "videoTitle": "Anima Sound System - '68 (Anima)",
+      "channel": "AnimaSoundSystem1",
+      "source": "https://www.youtube.com/watch?v=mSiimmBj5rk"
+    }
+  ]
+}
