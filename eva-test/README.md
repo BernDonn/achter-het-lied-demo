@@ -1,5 +1,5 @@
-# Achter het lied — Notes-selectie
+# Achter het lied — met Eva
 
-Elf volledige nummers met vooraf opgenomen Eva/Callirrhoe-intro’s. Bowie opent; Vivaldi RV638 bevat alle drie delen; Callas zingt Gualtier Maldè/Caro nome; Hoffmann is Hélas mon cœur s’égare encore. Geen lyricsdienst.
+25 volledige muziekstukken met een vooraf opgenomen Eva-verhaal per stuk, een aantalvrije opening en afsluiting. De oorspronkelijke elf verhalen en muziekbestanden zijn ongewijzigd.
 
-Anima Sound System — 68 (Original Mix) sluit af na Vivaldi, met een nieuwe slotaankondiging vooraf en zonder gesproken slot achteraf.
+De lyricsvoorziening voor de veertien nieuwe stukken is nog niet aangesloten; instrumentale muziek krijgt geen lyricsknop. De publieke speler doet geen nieuwe TTS-aanroepen. Bronnen en rechtenvoorbehoud staan in de speler.
