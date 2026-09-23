@@ -46,3 +46,6 @@ eva-test/media/*expansion-*.mp3
 !eva-test/media/music-expansion-27.mp3
 !eva-test/media/music-expansion-28.mp3
 !eva-test/media/music-expansion-30.mp3
+
+# Approved opera release: audio-only stream-copy exports.
+!eva-test/media/music-opera-*.m4a
