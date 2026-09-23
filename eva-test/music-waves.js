@@ -33,5 +33,5 @@
   ['play','pause','ended','emptied','seeked','volumechange'].forEach(e=>audio.addEventListener(e,sync));
   reduced.addEventListener('change',sync);document.addEventListener('visibilitychange',sync);
   if(window.ResizeObserver)new ResizeObserver(draw).observe(canvas);else window.addEventListener('resize',draw);
-  draw();fetch('music-waves.json?v=opera38-1',{credentials:'omit'}).then(r=>{if(!r.ok)throw Error('wave data');return r.json()}).then(v=>{data=v;sync();}).catch(()=>{canvas.remove();});
+  draw();fetch('music-waves.json?v=paradiso1995-1',{credentials:'omit'}).then(r=>{if(!r.ok)throw Error('wave data');return r.json()}).then(v=>{data=v;sync();}).catch(()=>{canvas.remove();});
 })();
